@@ -1,0 +1,343 @@
+<app-sidebar></app-sidebar>
+<div class="container">
+  <div id="course-info-window" (click)="hideCourseInfo($event)" class="course-info-outer display-none">
+    <div class="course-info">
+      <div class="course-info-inner">
+        <div class="courseTitle">
+          Course title
+        </div>
+        <div class="courseImage">
+          <div class="courseImage-inner">
+            <img class="courseImg" src="assets/Img/image.png" width="30%" style="margin-left: 35%;">
+          </div>
+        </div>
+        <div class="courseDescription">
+          <div style="width: 100%;text-align: center;padding-top: 7.5px;padding-bottom: 7.5px;color: ivory;background-color: rgba(63, 169, 245, 0.925);">
+            Description
+          </div>
+          <p class="courseDesc">
+
+          </p>
+
+        </div>
+        <div class="courseModules">
+          <div class="courseModules-inner">
+            <div style="width: 100%;text-align: center;padding-top: 7.5px;padding-bottom: 7.5px;color: ivory;background-color: rgba(63, 169, 245, 0.925);">
+              Modules
+            </div>
+            <ul>
+              <li (click)="showDescription($event)">Module</li>
+              <div class="zero-height">
+                <p style="padding: 2.5px;background-color: white;">
+                  Module description
+                </p>
+              </div>
+              <li (click)="showDescription($event)">Module</li>
+              <div class="zero-height">
+                <p style="padding: 2.5px;background-color: white;">
+                  Module description
+                </p>
+              </div>
+              <li (click)="showDescription($event)">Module</li>
+              <div class="zero-height">
+                <p style="padding: 2.5px;background-color: white;">
+                  Module description
+                </p>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="courseRating">
+          <div style="width: 100%;text-align: center;padding-top: 7.5px;padding-bottom: 7.5px;color: ivory;background-color: rgba(63, 169, 245, 0.925);">
+            Ratings
+          </div>
+          <div class="courseRatings">
+            <div class="rating">
+              <img src="assets\Img\star0.svg" width="30px" class="rating__star far fa-star">
+              <img src="assets\Img\star0.svg" width="30px" class="rating__star far fa-star">
+              <img src="assets\Img\star0.svg" width="30px" class="rating__star far fa-star">
+              <img src="assets\Img\star0.svg" width="30px" class="rating__star far fa-star">
+              <img src="assets\Img\star0.svg" width="30px" class="rating__star far fa-star">
+        </div>
+          </div>
+        </div>
+        <div class="courseCreationDate">
+          <div style="width: 100%;text-align: center;padding-top: 7.5px;padding-bottom: 7.5px;color: rgb(10,12,20);background-color: rgba(225, 225, 225, 0.925);">
+            Created at :
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sub-container">
+    <div class="filterbar">
+      <div id="filterbar-inner">
+        <div class="type-div dropdown-div">
+          <span class="filterer" id="type" tabindex=0>
+            <a>Type</a>
+            <img class="dropdown-icon" src="assets\Img\arrow_drop_down-white-18dp.svg" width="25px">
+          </span>
+          <ul class="dropdown-list">
+            <li>Video</li>
+            <li>Playlist</li>
+            <li>Course</li>
+            <li>Exercise</li>
+            <li>Exam</li>
+          </ul>
+        </div>
+        <div class="language-div dropdown-div">
+          <span class="filterer" id="language" tabindex=0>
+            <a>Language</a>
+            <img class="dropdown-icon" src="assets\Img\arrow_drop_down-white-18dp.svg" width="25px">
+          </span>
+          <ul class="dropdown-list">
+            <li>Arabic</li>
+            <li>English</li>
+            <li>French</li>
+          </ul>
+        </div>
+        <div class="size-div dropdown-div">
+          <span class="filterer" id="size" tabindex=0>
+            <a>Size</a>
+            <img class="dropdown-icon" src="assets\Img\arrow_drop_down-white-18dp.svg" width="25px">
+          </span>
+          <ul class="dropdown-list">
+            <li>Small</li>
+            <li>Meduim</li>
+            <li>Large</li>
+          </ul>
+        </div>
+        <div class="sort-icon-div">
+          <div class="sort-icon-div-inner">
+            <span class="sort-filter" tabindex=0>
+              <img id="sort-icon" src="assets\Img\sort-white-18dp.svg" alt="sort" width="35">
+            </span>
+            <ul class="dropdown-list">
+              <li>By clicks</li>
+              <li>By date</li>
+              <li>By rating</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-outer">
+      <div id="grid">
+        <div class="grid-container">
+          <div class="grid-item">
+            <div class="item">
+              <div class="item-top-div">
+                <div class="item-course">
+                  <a>Course</a>
+                </div>
+              </div>
+              <div class="item-image-div">
+                <img class="playlist-icon" src="assets\Img\playlist-white.svg">
+              </div>
+              <div class="item-bottom-div">
+                <div class="item-title">
+                  <a>Title</a>
+                </div>
+                <div class="item-rating">
+                  Rating
+                </div>
+                <div class="take-info-div">
+                  <div class="take-div">
+                    Take
+                  </div>
+                  <div (click)="showCourseInfo()" class="info-div">
+                    <a>
+                      <img class="info-icon" src="assets\Img\info.svg" width="25px" style="padding: 2.5px">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="item">
+              <div class="item-top-div">
+                <div class="item-course">
+                  <a>Course</a>
+                </div>
+                <div class="item-module">
+                  <a>Module</a>
+                </div>
+              </div>
+              <div class="item-image-div">
+                <img class="exercises-icon" src="assets\Img\exercises-white.svg">
+              </div>
+              <div class="item-bottom-div">
+                <div class="item-title">
+                  <a>Title</a>
+                </div>
+                <div class="item-rating">
+                  Rating
+                </div>
+                <div class="item-source">
+                  <a>Source :</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="item">
+              <div class="item-top-div">
+                <div class="item-course">
+                  <a>Course</a>
+                </div>
+                <div class="item-module">
+                  <a>Module</a>
+                </div>
+              </div>
+              <div class="item-image-div">
+                <img class="video-icon" src="assets\Img\video-white.svg">
+              </div>
+              <div class="item-bottom-div">
+                <div class="item-title">
+                  <a>Title</a>
+                </div>
+                <div class="item-rating">
+                  Rating
+                </div>
+                <div class="item-source">
+                  <a>Source :</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="item">
+              <div class="item-top-div">
+                <div class="item-course">
+                  <a>Course</a>
+                </div>
+                <div class="item-module">
+                  <a>Module</a>
+                </div>
+              </div>
+              <div class="item-image-div">
+                <img class="exam-icon" src="assets\Img\exam-white.svg">
+              </div>
+              <div class="item-bottom-div">
+                <div class="item-title">
+                  <a>Title</a>
+                </div>
+                <div class="item-rating">
+                  Rating
+                </div>
+                <div class="item-source">
+                  <a>Source :</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="item">
+              <div class="item-top-div">
+                <div class="item-course">
+                  <a>Course</a>
+                </div>
+                <div class="item-module">
+                  <a>Module</a>
+                </div>
+              </div>
+              <div class="item-image-div">
+                <img class="exam-correction-icon" src="assets\Img\exam-correction.svg">
+              </div>
+              <div class="item-bottom-div">
+                <div class="item-title">
+                  <a>Title</a>
+                </div>
+                <div class="item-rating">
+                  Rating
+                </div>
+                <div class="item-source">
+                  <a>Source :</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="item">
+              <div class="item-top-div">
+                <div class="item-course">
+                  <a>Course</a>
+                </div>
+                <div class="item-module">
+                  <a>Module</a>
+                </div>
+              </div>
+              <div class="item-image-div">
+                <img class="book-icon" src="assets\Img\book-white.svg">
+              </div>
+              <div class="item-bottom-div">
+                <div class="item-title">
+                  <a>Title</a>
+                </div>
+                <div class="item-rating">
+                  Rating
+                </div>
+                <div class="item-source">
+                  <a>Source :</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="item">
+              <div class="item-top-div">
+                <div class="item-course">
+                  <a>Course</a>
+                </div>
+                <div class="item-module">
+                  <a>Module</a>
+                </div>
+              </div>
+              <div class="item-image-div">
+                <img class="exercises-correction-icon" src="assets\Img\exercises-correction-white.svg">
+              </div>
+              <div class="item-bottom-div">
+                <div class="item-title">
+                  <a>Title</a>
+                </div>
+                <div class="item-rating">
+                  Rating
+                </div>
+                <div class="item-source">
+                  <a>Source :</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="item">
+              <div class="item-top-div">
+                <div class="item-course">
+                  <a>Course</a>
+                </div>
+                <div class="item-module">
+                  <a>Module</a>
+                </div>
+              </div>
+              <div class="item-image-div">
+                <img class="project-icon" src="assets\Img\project-white.svg">
+              </div>
+              <div class="item-bottom-div">
+                <div class="item-title">
+                  <a>Title</a>
+                </div>
+                <div class="item-rating">
+                  Rating
+                </div>
+                <div class="item-source">
+                  <a>Source :</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

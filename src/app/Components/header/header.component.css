@@ -1,0 +1,244 @@
+* {
+  outline: none;
+}
+
+.header {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    position: relative;
+    -webkit-box-shadow: 0 4px 4px -2.5px rgb(30,31,38);
+    -moz-box-shadow: 0 4px 4px -2.5px rgb(30,31,38);
+    box-shadow: 0 4px 4px -2.5px rgb(30,31,38);
+    z-index: 2;
+}
+
+.header-darkmode {
+    -webkit-box-shadow: 0 2.5px 2.5px -2.5px rgb(255, 255, 255);
+    -moz-box-shadow: 0 2.5px 2.5px -2.5px rgb(255, 255, 255);
+    box-shadow: 0 2.5px 2.5px -2.5px rgb(255, 255, 255);
+}
+
+.lightmode-txt {
+    color: rgba(23, 26, 27, 0.85);
+}
+
+.darkmode-txt {
+    color: rgba(255, 255, 240, 0.85);
+}
+
+
+.darkmode-bg {
+  background-color: rgb(30,31,38);
+}
+
+.lightmode-bg {
+  background-color: rgb(255, 255, 255);
+}
+
+.logo-div {
+    width: 15%;
+    text-align: center;
+}
+
+.logo img {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.nav-div-outer {
+    width: 85%;
+    display: flex;
+}
+
+.nav-div {
+    width: 65%;
+    height: 50px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav {
+    list-style: none;
+}
+
+.current-nav {
+    opacity: 0.75;
+}
+
+.nav li {
+    display: inline;
+    margin: 2.5%;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.nav li a {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.nav li a:hover {
+    opacity: 0.85;
+}
+
+#login-signup {
+    width: 20%;
+    height: auto;
+    display: flex;
+    position: relative;
+    top: 75%;
+    transform: translateY(-50%);
+}
+
+#login-signup div {
+    margin: 5%;
+}
+
+#login, #signup {
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 250ms ease-in-out;
+}
+
+.login-lightmode {
+    box-shadow: 0.5px 0.5px 1.5px rgba(23, 26, 27, 0.85);
+}
+
+.login-darkmode {
+    box-shadow: 0.5px 0.5px 1.5px rgba(255, 255, 240, 0.85);
+}
+
+#login:hover {
+    color: rgb(22, 22, 22);
+    box-shadow: 0.5px 0.5px 1.5px rgb(0, 0, 0);
+    background-color: rgb(225, 225, 225);
+}
+
+#signup {
+    white-space: nowrap;
+    color: ivory;
+    background-color: rgb(63,169,245);
+    box-shadow: 0.5px 0.5px 1.5px #1279da;
+}
+
+#signup:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(51, 137, 200);
+}
+
+@media screen and (max-width: 800px) {
+
+    .header {
+        z-index: 4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-div-outer {
+        display: block;
+    }
+
+    #hamburger img{
+        position: absolute;
+    }
+
+    #hamburger{
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: 25%;
+        right: 15%;
+        float: right;
+        cursor: pointer;
+    }
+
+    #toggle {
+        display: none;
+    }
+
+    .nav-div {
+        display: none;
+    }
+}
+
+#menu {
+    display: none;
+}
+
+.lightmode-menu {
+    background-color: rgb(255, 255, 255);
+}
+
+.darkmode-menu {
+    background-color: rgb(30,31,38);
+}
+
+.lightmode-txt {
+    color: rgba(23, 26, 27, 0.85);
+}
+
+.darkmode-txt {
+    color: rgba(255, 255, 240, 0.85);
+}
+
+.lightmode-li {
+    -webkit-box-shadow: 0 4px 5px -5px rgba(23, 26, 27, 0.85);
+    -moz-box-shadow: 0 4px 5px -5px rgba(23, 26, 27, 0.85);
+    box-shadow: 0 4px 5px -5px rgba(23, 26, 27, 0.85);
+}
+
+.darkmode-li {
+    -webkit-box-shadow: 0 4px 5px -5px rgba(255, 255, 240, 0.85);
+    -moz-box-shadow: 0 4px 5px -5px rgba(255, 255, 240, 0.85);
+    box-shadow: 0 4px 5px -5px rgba(255, 255, 255, 0.85);
+}
+
+@media screen and (max-width: 800px) {
+
+    #menu {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: fixed;
+        transition: all 0.5s ease-in-out;
+        z-index: 3;
+    }
+
+    #menu ul {
+        padding-inline-start: 0;
+        margin-block-end: 0;
+        margin-block-start: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    #menu ul li {
+        display: block;
+        padding: 25px;
+    }
+
+    #menu ul li a {
+        text-decoration: none;
+        font-family: sans-serif;
+        font-size: larger;
+        font-weight: bold;
+    }
+}
+
+
+.display-none {
+    display: none;
+}
+
+.zero-opacity {
+    opacity: 0;
+}

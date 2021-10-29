@@ -1,0 +1,40 @@
+<div id="darken" class="display-none" style="position: fixed;width: 100%;height: 100%;z-index: 5;background-color: rgba(0, 0, 0, 0.75);">
+</div>
+<header class="header lightmode-bg">
+    <div class="logo-div">
+        <a href="" class="logo">
+            <img alt="myClasses" src="assets/Img/logo.svg" style="width: 80px;">
+            <img class="zero-opacity display-none" alt="myClasses" src="assets/Img/logo__.svg" style="width: 80px;">
+        </a>
+    </div>
+    <div class="nav-div-outer">
+        <label class="display-none" id="hamburger" for="toggle"><img id="hamburger-black" src="assets/Img/hamburger_black.svg" width="40px"><img id="hamburger-white" class="zero-opacity" src="assets/Img/hamburger_white.svg" width="40px"></label>
+        <input (click)="menuToggle($event)" class="display-none" id="toggle" type="checkbox">
+        <div class="nav-div">
+            <ul class="nav">
+                <li class="current-nav"><a class="lightmode-txt" href="">Home</a></li>
+                <li><a class="lightmode-txt" href="">Home</a></li>
+                <li><a class="lightmode-txt" href="">Home</a></li>
+                <li><a class="lightmode-txt" href="">Home</a></li>
+            </ul>
+        </div>
+        <div id="login-signup">
+            <div>
+                <a class="lightmode-txt login-lightmode" id="login" routerLink='/login'>Login</a>
+            </div>
+            <div>
+                <a id="signup" routerLink='/signup'>Sign Up</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="lightmode-menu" id="menu" [@toggleMenu]="menuState">
+    <ul>
+    <li class="lightmode-li menu-li"><a class="lightmode-txt menu-a" href="">Home</a></li>
+    <li class="lightmode-li menu-li"><a class="lightmode-txt menu-a" href="">Home</a></li>
+    <li class="lightmode-li menu-li"><a class="lightmode-txt menu-a" href="">Home</a></li>
+    <li class="lightmode-li menu-li"><a class="lightmode-txt menu-a" href="">Home</a></li>
+    <li class="lightmode-li menu-li"><a class="lightmode-txt menu-a" href="">Home</a></li>
+    <li class="lightmode-li menu-li"><a class="lightmode-txt menu-a" href="">Home</a></li>
+    </ul>
+</div>

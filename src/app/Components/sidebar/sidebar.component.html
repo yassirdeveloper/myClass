@@ -1,0 +1,99 @@
+<div class="sidebar-outer">
+  <div class="sidebar" [@slideRight]='sidebarState'>
+    <div class="sidebar-inner">
+      <div id="return-to-top">
+          <a (click)="scrollTop()"><img src="assets/Img/arrow_circle_up-white-18dp.svg" width="50px" alt="Return to top"></a>
+      </div>
+      <div id="search">
+          <form id="search-form">
+              <a href="" id="search-icon"><img src="assets/Img/search-icon.svg" width="30px"></a>
+              <input id="search-input" type="search" placeholder="Search...">
+          </form>
+      </div>
+      <div class="titlediv" (click)="home()">
+        <a>Home</a>
+      </div>
+      <div class="title-div" (click)="slideInElements(0)">
+        <a>courses</a><img class="left-icon display-none" src="assets\Img\chevron_left-white-18dp.svg" width="35px"><img class="right-icon" src="assets\Img\chevron_right-white-18dp.svg" width="35px">
+      </div>
+      <div [@slideIn]='coursesStates[0]' id="courses">
+          <ul id="courses-list">
+              <li class="course" (click)="expandcourse(0)"><a><div class="plus-icon"><img class="plus-icon-img" src="assets/Img/plus-white.svg" width="25px"><img class="minus-icon-img display-none" src="assets/Img/minus-white.svg" width="25px"></div><div class="course-div">course</div></a></li>
+              <div [@slideIn]='modulesStates[0]' class="modules">
+                  <ul class="modules-list">
+                  <li (click)="selectModule(0,0)">Module</li>
+                  <li (click)="selectModule(0,1)">Module</li>
+                  <li (click)="selectModule(0,2)">Module</li>
+              </ul>
+              </div>
+              <li class="course" (click)="expandcourse(1)"><a><div class="plus-icon"><img class="plus-icon-img" src="assets/Img/plus-white.svg" width="25px"><img class="minus-icon-img display-none" src="assets/Img/minus-white.svg" width="25px"></div><div class="course-div">course</div></a></li>
+              <div [@slideIn]='modulesStates[1]' class="modules">
+                  <ul class="modules-list">
+                  <li (click)="selectModule(1,0)">Module</li>
+                  <li (click)="selectModule(1,1)">Module</li>
+                  <li (click)="selectModule(1,2)">Module</li>
+              </ul>
+              </div>
+              <li class="course" (click)="expandcourse(2)"><a><div class="plus-icon"><img class="plus-icon-img" src="assets/Img/plus-white.svg" width="25px"><img class="minus-icon-img display-none" src="assets/Img/minus-white.svg" width="25px"></div><div class="course-div">course</div></a></li>
+              <div [@slideIn]='modulesStates[2]' class="modules">
+                  <ul class="modules-list">
+                  <li (click)="selectModule(2,0)">Module</li>
+                  <li (click)="selectModule(2,1)">Module</li>
+                  <li (click)="selectModule(2,2)">Module</li>
+              </ul>
+              </div>
+              <li class="course" (click)="expandcourse(3)"><a><div class="plus-icon"><img class="plus-icon-img" src="assets/Img/plus-white.svg" width="25px"><img class="minus-icon-img display-none" src="assets/Img/minus-white.svg" width="25px"></div><div class="course-div">course</div></a></li>
+              <div [@slideIn]='modulesStates[3]' class="modules">
+                  <ul class="modules-list">
+                  <li (click)="selectModule(3,0)">Module</li>
+                  <li (click)="selectModule(3,1)">Module</li>
+                  <li (click)="selectModule(3,2)">Module</li>
+              </ul>
+              </div>
+          </ul>
+      </div>
+      <div class="title-div" (click)="slideInElements(1)">
+        <a>My Modules</a><img class="left-icon display-none" src="assets\Img\chevron_left-white-18dp.svg" width="35px"><img class="right-icon" src="assets\Img\chevron_right-white-18dp.svg" width="35px">
+      </div>
+      <div [@slideIn]='coursesStates[1]' id="myModules">
+          <ul id="myModules-list">
+            <li (click)="selectmyModule(0)">Module</li>
+            <li (click)="selectmyModule(1)">Module</li>
+            <li (click)="selectmyModule(2)">Module</li>
+          </ul>
+      </div>
+      <div class="title-div" (click)="slideInElements(2)">
+        <a>Browse</a><img class="left-icon display-none" src="assets\Img\chevron_left-white-18dp.svg" width="35px"><img class="right-icon" src="assets\Img\chevron_right-white-18dp.svg" width="35px">
+      </div>
+      <div [@slideIn]='coursesStates[2]' id="browse">
+          <ul id="browse-list">
+            <li (click)="browse(0)">Type</li>
+            <li (click)="browse(1)">Type</li>
+            <li (click)="browse(2)">Type</li>
+          </ul>
+      </div>
+      <div class="titlediv" (click)="signUpClassmate()">
+        <a>Sign Up a Classmate</a>
+      </div>
+      <div class="titlediv" (click)="sendFeedback()">
+        <a>Send Feedback</a>
+      </div>
+      <div class="title-div settings-title" (click)="slideInElements(3)">
+        <a>Settings</a><img class="left-icon display-none" src="assets\Img\chevron_left-white-18dp.svg" width="35px"><img class="right-icon" src="assets\Img\chevron_right-white-18dp.svg" width="35px">
+      </div>
+      <div [@slideIn]='coursesStates[3]' id="settings">
+          <ul id="settings-list">
+            <li class="setting" (click)="selectSetting(0)">Setting</li>
+            <li class="setting" (click)="selectSetting(1)">Setting</li>
+            <li class="setting" (click)="selectSetting(2)">Setting</li>
+          </ul>
+      </div>
+      <div id="help">
+        <img id="help-icon-white" src="assets\Img\help_outline-white-18dp.svg" width="50px" alt="Help">
+      </div>
+    </div>
+  </div>
+  <div class="sidebar-slider" [@sliderRight]='sidebarState' (click)="expandSidebar()">
+    <a id="expand-sidebar-icon"><img id="expand-sidebar-img" src="assets/Img/double-right.svg" style="padding-left: 2.5%;padding-right: 2.5%;opacity: 0.875;" width="95%"></a>
+  </div>
+</div>

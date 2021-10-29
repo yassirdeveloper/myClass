@@ -1,0 +1,76 @@
+@font-face {
+  font-family: exo2;
+  src: url("../../../assets/Fonts/Exo2-Bold.ttf");
+}
+
+.background-div {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgb(63,169,245);
+}
+
+#notfound-div {
+  width: 100%;
+  transform: translateY(25%);
+  display: block;
+}
+
+#num{
+  text-align: center;
+  margin: 10px;
+}
+
+#num a {
+  font-family: exo2;
+  font-size: 100px;
+  color: rgb(255, 255, 255);
+  border: 2.5px double rgb(255, 255, 255);
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 10px;
+}
+
+#notfound {
+  font-family: exo2;
+  text-align: center;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+}
+
+#return-home {
+  text-align: center;
+  padding: 50px;
+}
+
+#return-home a {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: 2.5px solid rgb(255, 255, 255);
+  font-size: 25px;
+  font-family: exo2;
+  transition: 500ms ease-in-out;
+  text-decoration: none;
+}
+
+.home-link {
+  color: rgb(255, 255, 255);
+}
+
+.home-link:hover {
+  color: rgb(10, 120, 194);
+  background-color: ivory;
+}
+
+.darkmode {
+  background-color: rgb(30,31,38);
+}
+
+@media screen and (max-width: 800px) {
+  #notfound-div {
+    transform: translateY(-100%);
+  }
+}

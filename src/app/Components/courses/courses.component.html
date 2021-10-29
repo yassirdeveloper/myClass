@@ -1,0 +1,48 @@
+<div style="width: 100%;display: flex;">
+  <div class="course-overview-div-outer">
+    <div class="course-overview-div" [@slideRight]='courseOverviewState'>
+      <div class="course-overview-div-inner">
+        <div id="returnToTop">
+          <a (click)="returnToTop()"><img src="assets/Img/arrow_circle_up-white-18dp.svg" width="50px" alt="Return to top"></a>
+        </div>
+        <div class="overview-div">
+          <a>Overview</a>
+        </div>
+        <div id="modules">
+          <ul id="modulesList">
+              <li class="module" (click)="expandModule(0)"><a><div class="plus-icon"><img class="plus-icon-img" src="assets/Img/plus-white.svg" width="25px"><img class="minus-icon-img display-none" src="assets/Img/minus-white.svg" width="25px"></div><div class="module-div">Module</div></a></li>
+              <div [@slideDown]='materialsStates[0]' class="materials">
+                  <ul class="materialsList">
+                  <li (click)="selectMaterial(0,0)">Material</li>
+                  <li (click)="selectMaterial(0,1)">Material</li>
+                  <li (click)="selectMaterial(0,2)">Material</li>
+              </ul>
+              </div>
+              <li class="module" (click)="expandModule(1)"><a><div class="plus-icon"><img class="plus-icon-img" src="assets/Img/plus-white.svg" width="25px"><img class="minus-icon-img display-none" src="assets/Img/minus-white.svg" width="25px"></div><div class="module-div">Module</div></a></li>
+              <div [@slideDown]='materialsStates[1]' class="materials">
+                  <ul class="materialsList">
+                  <li (click)="selectMaterial(1,0)">Material</li>
+                  <li (click)="selectMaterial(1,1)">Material</li>
+                  <li (click)="selectMaterial(1,2)">Material</li>
+              </ul>
+              </div>
+              <li class="module" (click)="expandModule(2)"><a><div class="plus-icon"><img class="plus-icon-img" src="assets/Img/plus-white.svg" width="25px"><img class="minus-icon-img display-none" src="assets/Img/minus-white.svg" width="25px"></div><div class="module-div">Module</div></a></li>
+              <div [@slideDown]='materialsStates[2]' class="materials">
+                  <ul class="materialsList">
+                  <li (click)="selectMaterial(2,0)">Material</li>
+                  <li (click)="selectMaterial(2,1)">Material</li>
+                  <li (click)="selectMaterial(2,2)">Material</li>
+              </ul>
+              </div>
+          </ul>
+      </div>
+      </div>
+    </div>
+    <div class="course-overview-slider" [@sliderRight]='courseOverviewState' (click)="expandCourseOverview()">
+      <a id="expand-course-overview-icon"><img id="expand-course-overview-img" src="assets/Img/double-right.svg" style="padding-left: 2.5%;padding-right: 2.5%;opacity: 0.875;" width="95%"></a>
+    </div>
+  </div>
+  <div>
+
+  </div>
+</div>
